@@ -1,0 +1,19 @@
+# .NET build outputs
+**/bin/
+**/obj/
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# SQLite databases (do not commit DB)
+*.sqlite
+*.db
+*.db-shm
+*.db-wal
+
+# ASP.NET Core local settings
+**/appsettings.Development.json
