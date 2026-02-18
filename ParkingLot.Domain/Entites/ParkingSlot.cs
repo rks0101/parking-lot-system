@@ -1,7 +1,7 @@
 using ParkingLot.Domain.Enums;
 
 namespace ParkingLot.Domain.Entities;
-public class ParkingSLot
+public class ParkingSlot
 {
     public int Id{get; set;}
     public string SlotNumber{get; set;} = string.Empty;//Initially it should be empty

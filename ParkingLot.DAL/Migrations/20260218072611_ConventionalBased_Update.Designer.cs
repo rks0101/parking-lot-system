@@ -10,8 +10,8 @@ using ParkingLot.DAL.Data;
 namespace ParkingLot.DAL.Migrations
 {
     [DbContext(typeof(ParkingLotDbContext))]
-    [Migration("20260214183920_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20260218072611_ConventionalBased_Update")]
+    partial class ConventionalBased_Update
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

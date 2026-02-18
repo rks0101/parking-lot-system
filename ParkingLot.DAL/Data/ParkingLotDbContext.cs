@@ -9,4 +9,7 @@ public class ParkingLotDbContext : DbContext
         : base(options) { }
 
     public DbSet<ParkingSlot> ParkingSlots => Set<ParkingSlot>();
+    public DbSet<Vehicle> Vehicles => Set<Vehicle>();
+    public DbSet<Ticket> Tickets => Set<Ticket>();
+    public DbSet<Payment> Payments => Set<Payment>();
 }
