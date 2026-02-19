@@ -17,7 +17,7 @@ public class ParkingSlotsController : ControllerBase
 
     [HttpGet]
     public async Task<IActionResult> GetAll()
-        => Ok(await _service.GetSlotsAsync());
+        => Ok(await _service.GetAllAsync());
 
     [HttpPost]
     public async Task<IActionResult> Create(ParkingSlot slot)

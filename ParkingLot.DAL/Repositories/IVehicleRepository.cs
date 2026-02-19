@@ -1,5 +1,7 @@
 using ParkingLot.Domain.Entities;
+
 namespace ParkingLot.DAL.Repositories;
+
 public interface IVehicleRepository
 {
     Task<Vehicle?> GetByIdAsync(int id);

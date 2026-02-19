@@ -15,10 +15,16 @@ builder.Services.AddDbContext<ParkingLotDbContext>(options =>
 
 // DAL
 builder.Services.AddScoped<IParkingSlotRepository, ParkingSlotRepository>();
+builder.Services.AddScoped<IVehicleRepository, VehicleRepository>();
+builder.Services.AddScoped<ITicketRepository, TicketRepository>();
+builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
+
 
 // BAL
 builder.Services.AddScoped<IParkingSlotService, ParkingSlotService>();
-
+builder.Services.AddScoped<IVehicleService, VehicleService>();
+builder.Services.AddScoped<ITicketService, TicketService>();    
+builder.Services.AddScoped<IPaymentService, PaymentService>();
 var app = builder.Build();
 
 app.UseSwagger();
