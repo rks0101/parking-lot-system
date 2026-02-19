@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using ParkingLot.Domain.Enums;
 namespace ParkingLot.Domain.Entities;
 
