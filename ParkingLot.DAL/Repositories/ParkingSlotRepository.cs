@@ -15,6 +15,12 @@ public class ParkingSlotRepository : IParkingSlotRepository
 
     public Task<List<ParkingSlot>> GetAllAsync()
         => _db.ParkingSlots.AsNoTracking().ToListAsync();
+    
+    public Task<ParkingSlot?> GetByIdAsync(int id)
+        => _db.ParkingSlots.AsNoTracking().FirstOrDefaultAsync(s => s.Id == id);
+    
+    public Task<ParkingSlot?> GetBySlotNumberAsync(string slotNumber)
+        => _db.ParkingSlots.AsNoTracking().FirstOrDefaultAsync(s => s.SlotNumber == slotNumber);
 
     public async Task AddAsync(ParkingSlot slot)
         => await _db.ParkingSlots.AddAsync(slot);

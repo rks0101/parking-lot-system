@@ -16,19 +16,19 @@ public class PaymentRepository : IPaymentRepository
     public Task<Payment?> GetByIdAsync(int id)
         => _db.Payments
               .Include(p => p.Ticket)
-              .ThenInclude(t => t.Vehicle)
+              .ThenInclude(t => t!.Vehicle)
               .FirstOrDefaultAsync(p => p.Id == id);
 
     public Task<Payment?> GetByTicketIdAsync(int ticketId)
         => _db.Payments
               .Include(p => p.Ticket)
-              .ThenInclude(t => t.Vehicle)
+              .ThenInclude(t => t!.Vehicle)
               .FirstOrDefaultAsync(p => p.TicketId == ticketId);
 
     public Task<List<Payment>> GetAllAsync()
         => _db.Payments
               .Include(p => p.Ticket)
-              .ThenInclude(t => t.Vehicle)
+              .ThenInclude(t => t!.Vehicle)
               .AsNoTracking()
               .ToListAsync();
 
